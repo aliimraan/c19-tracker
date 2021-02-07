@@ -1,0 +1,117 @@
+.boxes{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  height: 100px;
+  min-width:150px;
+  padding:10px 5px;
+  border-radius: 5px;
+  background:#0a0531;
+  box-shadow: 0 0 10px #130f40;
+}
+.boxes .boxes-heading{
+ color: red;
+ text-transform: uppercase;
+ font-weight: 800;
+ font-size: 1.2rem;
+}
+.boxes p{
+ color: red;
+ font-weight: 800;
+ font-size: 0.9rem;
+}
+/* map */
+.land{
+  fill: #aa1337;
+				fill-opacity: 1;
+				stroke:black;
+				stroke-opacity: 1;
+				stroke-width:0.5;
+}
+svg{
+  width: 100%;
+  height:600px;
+}
+.main_area{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+  background: #0a0c3d;
+}
+.main_area .box1,.main_area .box2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  flex-direction: column;
+}
+.main_area .box1{
+  border-radius: 20px;
+}
+.main_area .box2 .allBox{
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  width: 100%;
+  flex-wrap: wrap;
+  padding: 20px 0;
+}
+.main_area .box2 .map{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  flex-direction: column;
+}
+.main_area .box2 .map .stateName{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.main_area .box1 .section1,.main_area .box1 .section2{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 20px 0;
+  background: #0a0531;
+  border-radius: 20px;
+  padding:20px;
+}
+.main_area .box1 .section2 .table {
+ border-radius: 50%;
+}
+.main_area .box1 .section2 .table th{
+ color: #686de0;
+ text-transform: capitalize;
+}
+.main_area .box1 .section2 .table td{
+ color: #f9fafb;
+}
+@media (max-width:1242px){
+  .main_area{
+    flex-direction: column;
+    padding: 50px;
+  }
+  .main_area .box1,.main_area .box2{
+    width: 100%;
+  }
+}
+@media (max-width:760px){
+  .main_area{
+    padding: 10px;
+  }
+  .main_area .box1 .section1{
+    flex-direction: column;
+    gap: 50px;
+  }
+}

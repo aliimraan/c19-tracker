@@ -56,13 +56,7 @@ function DoughnutChart({data,total}) {
         options={{
         cutoutPercentage:90,
         responsive:true,
-          title:{
-            display:true,
-            text:`Confirmed ${confirmed}`,
-            position:'top',
-            align:'center',
-            fontSize:20,
-          },
+          
           legend:{
             display:true,
             position:'right',

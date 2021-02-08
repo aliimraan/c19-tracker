@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Outline&family=Londrina+Outline&display=swap');
 .boxes{
   display: flex;
   justify-content: center;
@@ -21,7 +22,6 @@
  font-weight: 800;
  font-size: 0.9rem;
 }
-/* map */
 .land{
   fill: #aa1337;
 				fill-opacity: 1;
@@ -32,6 +32,45 @@
 svg{
   width: 100%;
   height:600px;
+}
+.main_class{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.hero{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 400px;
+}
+.hero img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  object-fit:cover;
+  position: relative;
+}
+.hero span{
+  position: absolute;
+  top: 0;
+  right:0;
+  color: #f5f3f7;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 4.5rem;
+  font-weight: 800;
+  text-transform: capitalize;
+  font-family: 'Bungee Outline', cursive;
+  letter-spacing: 15px;
+  padding: 50px;
 }
 .main_area{
   display: flex;
@@ -51,10 +90,25 @@ svg{
 .main_area .box1{
   border-radius: 20px;
 }
+.main_area .box1 .section1 .subSec1 .doughnut{
+  position: relative;
+}
+.main_area .box1 .section1 .subSec1 h3{
+  position: absolute;
+  top: 0%;
+  left: 13%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #f6f4f8;
+  text-transform: capitalize;
+}
 .main_area .box2 .allBox{
   display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
+  justify-content:space-evenly;
+  align-items:flex-start;
   width: 100%;
   flex-wrap: wrap;
   padding: 20px 0;
@@ -113,5 +167,10 @@ svg{
   .main_area .box1 .section1{
     flex-direction: column;
     gap: 50px;
+  }
+  .hero span{
+    font-size: 3rem;
+    justify-content: center;
+    padding: 0;
   }
 }

@@ -14,17 +14,17 @@ function Maps() {
     const [confirmed,setConfirmed]=useState('')
     const [recovered,setRecovered]=useState('')
     const [deaths,setDeaths]=useState('')
+    const [total,setTotal]=useState('')
 
     useEffect(()=>{
         axios.get('https://api.covid19india.org/data.json').then(data=>{
             setStateName([data.data.statewise])
-            console.log([data.data.statewise])
             const {active,confirmed,recovered,deaths}=data.data.statewise[0]
                 setActive(active)
                 setRecovered(recovered)
                 setConfirmed(confirmed)
                 setDeaths(deaths)
-            
+                setTotal(data.data.statewise[0][0])
         }).catch(err=>console.log(err))
     },[])
   
@@ -51,7 +51,12 @@ function Maps() {
         <div className="main_area">
         <div className="box1">
             <div className="section1">
-                <div className="subSec1"><DoughnutChart data={item} total={stateName}/></div>
+                <div className="subSec1">
+                    <div className="doughnut">
+                        <DoughnutChart data={item} total={stateName}/>
+                        <h3>{item===undefined?confirmed:item.confirmed}<br/>confirmed</h3> 
+                    </div>   
+                </div>
                 <div className="subSec2"><LineGraph data={item} total={stateName}/></div>
             </div>
             <div className="section2">

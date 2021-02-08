@@ -14,7 +14,6 @@ function Maps() {
     const [confirmed,setConfirmed]=useState('')
     const [recovered,setRecovered]=useState('')
     const [deaths,setDeaths]=useState('')
-    const [total,setTotal]=useState('')
 
     useEffect(()=>{
         axios.get('https://api.covid19india.org/data.json').then(data=>{
@@ -24,14 +23,11 @@ function Maps() {
                 setRecovered(recovered)
                 setConfirmed(confirmed)
                 setDeaths(deaths)
-                setTotal(data.data.statewise[0][0])
         }).catch(err=>console.log(err))
     },[])
   
     const showState=(e)=>{
         e.target.style.fill="#cc2e54"
-        // console.log(e.target.id)
-        // console.log(e.target.attributes[1].nodeValue)
         setName(e.target.attributes[1].nodeValue)
         stateName[0].map(item=>{
             if(item.state===e.target.attributes[1].nodeValue){

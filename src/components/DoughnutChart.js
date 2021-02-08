@@ -1,6 +1,5 @@
 import React,{useState,useEffect} from 'react'
 import {Doughnut} from 'react-chartjs-2';
-import Boxes from './Boxes';
 
 function DoughnutChart({data,total}) {
     const[active,setActive]=useState('')
@@ -56,7 +55,6 @@ function DoughnutChart({data,total}) {
         options={{
         cutoutPercentage:90,
         responsive:true,
-          
           legend:{
             display:true,
             position:'right',

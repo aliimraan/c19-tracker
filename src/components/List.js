@@ -1,6 +1,5 @@
-import React,{useState,useEffect} from 'react'
+import React from 'react'
 import {Table} from 'react-bootstrap'
-import axios from 'axios'
 
 function List({record}) {
 
@@ -24,22 +23,21 @@ function List({record}) {
 
     return (
         <div className="table">
-        <Table striped bordered hover responsive>
-        <thead>
-          <tr>
-            <th>state</th>
-            <th>confirmed</th>
-            <th>active</th>
-            <th>recovered</th>
-            <th>decresed</th>
-          </tr>
-        </thead>
-        <tbody>
-        {showList()}
-        </tbody>
-        
-      </Table> 
-        </div>
+          <Table striped bordered hover responsive>
+            <thead>
+              <tr>
+                <th>state</th>
+                <th>confirmed</th>
+                <th>active</th>
+                <th>recovered</th>
+                <th>decresed</th>
+              </tr>
+            </thead>
+            <tbody>
+              {showList()}
+            </tbody>
+        </Table> 
+      </div>
     )
 }
 
